@@ -82,7 +82,7 @@ public class SteamVR_SkyboxEditor : Editor
 				var t = camera.transform;
 				t.position = target.transform.position;
 				camera.orthographic = false;
-				camera.fieldOfView = 90;
+				//camera.fieldOfView = 90;
 
 				for (int i = 0; i < directions.Length; i++)
 				{
@@ -178,7 +178,7 @@ public class SteamVR_SkyboxEditor : Editor
 
 				var oldTargetTexture = camera.targetTexture;
 				var oldOrthographic = camera.orthographic;
-				var oldFieldOfView = camera.fieldOfView;
+                //var oldFieldOfView = camera.fieldOfView;
 				var oldAspect = camera.aspect;
 
 				var oldPosition = target.transform.localPosition;
@@ -198,7 +198,7 @@ public class SteamVR_SkyboxEditor : Editor
 				targetTexture.wrapMode = TextureWrapMode.Clamp;
 				targetTexture.antiAliasing = 8;
 
-				camera.fieldOfView = dv;
+				//camera.fieldOfView = dv;
 				camera.orthographic = false;
 				camera.targetTexture = targetTexture;
 
@@ -320,7 +320,7 @@ public class SteamVR_SkyboxEditor : Editor
 				{
 					camera.targetTexture = oldTargetTexture;
 					camera.orthographic = oldOrthographic;
-					camera.fieldOfView = oldFieldOfView;
+					//camera.fieldOfView = oldFieldOfView;
 					camera.aspect = oldAspect;
 
 					target.transform.localPosition = oldPosition;

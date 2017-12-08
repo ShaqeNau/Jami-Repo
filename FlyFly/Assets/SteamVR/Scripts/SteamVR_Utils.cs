@@ -399,11 +399,11 @@ public static class SteamVR_Utils
 
 		var oldTargetTexture = camera.targetTexture;
 		var oldOrthographic = camera.orthographic;
-		var oldFieldOfView = camera.fieldOfView;
+		//var oldFieldOfView = camera.fieldOfView;
 		var oldAspect = camera.aspect;
 		var oldstereoTargetEye = camera.stereoTargetEye;
 		camera.stereoTargetEye = StereoTargetEyeMask.None;
-		camera.fieldOfView = 60.0f;
+		//camera.fieldOfView = 60.0f;
 		camera.orthographic = false;
 		camera.targetTexture = targetPreviewTexture;
 		camera.aspect = 1.0f;
@@ -433,7 +433,7 @@ public static class SteamVR_Utils
 		targetTexture.wrapMode = TextureWrapMode.Clamp;
 		targetTexture.antiAliasing = 8;
 
-		camera.fieldOfView = dv;
+		//camera.fieldOfView = dv;
 		camera.orthographic = false;
 		camera.targetTexture = targetTexture;
 		camera.aspect = oldAspect;
@@ -567,7 +567,7 @@ public static class SteamVR_Utils
 		{
 			camera.targetTexture = oldTargetTexture;
 			camera.orthographic = oldOrthographic;
-			camera.fieldOfView = oldFieldOfView;
+			//camera.fieldOfView = oldFieldOfView;
 			camera.aspect = oldAspect;
 			camera.stereoTargetEye = oldstereoTargetEye;
 

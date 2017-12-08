@@ -149,7 +149,7 @@ public class SteamVR_ExternalCamera : MonoBehaviour
 
 		cam = go.GetComponent<Camera>();
 		cam.stereoTargetEye = StereoTargetEyeMask.None;
-		cam.fieldOfView = config.fov;
+		//cam.fieldOfView = config.fov;
 		cam.useOcclusionCulling = false;
 		cam.enabled = false; // manually rendered
 

@@ -96,36 +96,36 @@ public class SteamVR_Frustum : MonoBehaviour
 
 		if (connected)
 		{
-			var system = OpenVR.System;
-			if (system != null && system.GetTrackedDeviceClass((uint)i) == ETrackedDeviceClass.TrackingReference)
-			{
-				var error = ETrackedPropertyError.TrackedProp_Success;
-				var result = system.GetFloatTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_FieldOfViewLeftDegrees_Float, ref error);
-				if (error == ETrackedPropertyError.TrackedProp_Success)
-					fovLeft = result;
+			//var system = OpenVR.System;
+			//if (system != null && system.GetTrackedDeviceClass((uint)i) == ETrackedDeviceClass.TrackingReference)
+			//{
+			//	var error = ETrackedPropertyError.TrackedProp_Success;
+			//	var result = system.GetFloatTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_FieldOfViewLeftDegrees_Float, ref error);
+			//	if (error == ETrackedPropertyError.TrackedProp_Success)
+			//		//fovLeft = result;
 
-				result = system.GetFloatTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_FieldOfViewRightDegrees_Float, ref error);
-				if (error == ETrackedPropertyError.TrackedProp_Success)
-					fovRight = result;
+			//	result = system.GetFloatTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_FieldOfViewRightDegrees_Float, ref error);
+			//	if (error == ETrackedPropertyError.TrackedProp_Success)
+			//		//fovRight = result;
 
-				result = system.GetFloatTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_FieldOfViewTopDegrees_Float, ref error);
-				if (error == ETrackedPropertyError.TrackedProp_Success)
-					fovTop = result;
+			//	result = system.GetFloatTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_FieldOfViewTopDegrees_Float, ref error);
+			//	if (error == ETrackedPropertyError.TrackedProp_Success)
+			//		//fovTop = result;
 
-				result = system.GetFloatTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_FieldOfViewBottomDegrees_Float, ref error);
-				if (error == ETrackedPropertyError.TrackedProp_Success)
-					fovBottom = result;
+			//	result = system.GetFloatTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_FieldOfViewBottomDegrees_Float, ref error);
+			//	if (error == ETrackedPropertyError.TrackedProp_Success)
+			//		//fovBottom = result;
 
-				result = system.GetFloatTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_TrackingRangeMinimumMeters_Float, ref error);
-				if (error == ETrackedPropertyError.TrackedProp_Success)
-					nearZ = result;
+			//	result = system.GetFloatTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_TrackingRangeMinimumMeters_Float, ref error);
+			//	if (error == ETrackedPropertyError.TrackedProp_Success)
+			//		//nearZ = result;
 
-				result = system.GetFloatTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_TrackingRangeMaximumMeters_Float, ref error);
-				if (error == ETrackedPropertyError.TrackedProp_Success)
-					farZ = result;
+			//	result = system.GetFloatTrackedDeviceProperty((uint)i, ETrackedDeviceProperty.Prop_TrackingRangeMaximumMeters_Float, ref error);
+			//	if (error == ETrackedPropertyError.TrackedProp_Success)
+			//		//farZ = result;
 
-				UpdateModel();
-			}
+			//	UpdateModel();
+			//}
 		}
 	}
 

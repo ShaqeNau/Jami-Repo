@@ -288,7 +288,7 @@ public class SteamVR : System.IDisposable
 		sceneHeight = sceneHeight / Mathf.Max(textureBounds[0].vMax - textureBounds[0].vMin, textureBounds[1].vMax - textureBounds[1].vMin);
 
 		aspect = tanHalfFov.x / tanHalfFov.y;
-		fieldOfView = 2.0f * Mathf.Atan(tanHalfFov.y) * Mathf.Rad2Deg;
+		//fieldOfView = 2.0f * Mathf.Atan(tanHalfFov.y) * Mathf.Rad2Deg;
 
 		eyes = new SteamVR_Utils.RigidTransform[] {
 			new SteamVR_Utils.RigidTransform(hmd.GetEyeToHeadTransform(EVREye.Eye_Left)),
